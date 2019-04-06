@@ -1,13 +1,13 @@
 ---
-title: "Class Project 02-28-2019"
+title: "Data Analysis on Harvard Course Enrollment"
 author: "Seeam S. Noor"
 date: "February 28, 2019"
 output: html_document
 ---
   
-##Looking at Harvard Undergraduate Course Enrollment  
+## Harvard Undergraduate Course Enrollment in Spring 2019  
   
-  
+
 ```{r setup, include=FALSE, warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
   library(tidyverse)
   library(readxl)
@@ -19,6 +19,8 @@ output: html_document
   download.file(url = "https://registrar.fas.harvard.edu/files/fas-registrar/files/class_enrollment_summary_by_term_03.06.18.xlsx", destfile = "reg_2018.xsls", mode = 'wb' )
 
 ```
+  
+  
 
 ```{r data, warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
   x_2019 <- read_excel("reg_2019.xsls", skip = 3) %>% 
